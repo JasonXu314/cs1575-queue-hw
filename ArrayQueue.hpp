@@ -32,7 +32,7 @@ void Queue<T>::enqueue(const T& elem) {
 		_expand();
 	}
 
-	// if you dondon't like the post-increment operator inside the array access, you can do it afterwards :P
+	// if you don't like the post-increment operator inside the array access, you can do it afterwards :P
 	_data[_size++] = elem;
 	// _size++;
 }
@@ -46,7 +46,7 @@ T Queue<T>::dequeue() throw(Error) {
 	// find the first thing in the queue
 	T temp = _data[0];
 
-	// we'll have to shift all the elements to the left by 1
+	// we'll have to shift all the elements to the left by 1. NOTE that this makes the dequeue operation O(n) instead of O(1).
 	for (unsigned long i = 0; i < _size - 1; i++) {
 		_data[i] = _data[i + 1];
 	}

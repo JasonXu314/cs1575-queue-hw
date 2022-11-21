@@ -1,5 +1,5 @@
-#ifndef QUEUE_H
-#define QUEUE_H
+#ifndef ARRAY_QUEUE_H
+#define ARRAY_QUEUE_H
 
 #include "AbstractQueue.h"
 
@@ -36,6 +36,6 @@ private:
 	void _shrink();
 };
 
-#include "Queue.hpp"
+#include "ArrayQueue.hpp"
 
 #endif
