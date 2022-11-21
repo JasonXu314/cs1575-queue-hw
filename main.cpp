@@ -2,7 +2,8 @@
 #include <string>
 
 // #include "ArrayQueue.h"
-#include "CleverArrayQueue.h"
+// #include "CleverArrayQueue.h"
+#include "LinkedQueue.h"
 
 using namespace std;
 
@@ -20,7 +21,8 @@ int main() {
 	cout << "Front: " << queue.front() << endl;
 	cout << "Back: " << queue.back() << endl;
 
-	cout << "Dequeue: " << queue.dequeue() << endl;
+	cout << "Dequeueing" << endl;
+	queue.dequeue();
 	cout << "Size: " << queue.size() << endl;
 
 	Queue<int> copy(queue);

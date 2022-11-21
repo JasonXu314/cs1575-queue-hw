@@ -18,9 +18,9 @@ public:
 	Queue<T>& operator=(const Queue<T>& other);
 
 	void enqueue(const T& elem);
-	T dequeue() throw(Error);
-	T front() const throw(Error);
-	T back() const throw(Error);
+	void dequeue() throw(Error);
+	const T& front() const throw(Error);
+	const T& back() const throw(Error);
 	bool empty() const;
 	unsigned long size() const;
 	void clear();

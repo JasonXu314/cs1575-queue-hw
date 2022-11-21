@@ -38,15 +38,13 @@ void Queue<T>::enqueue(const T& elem) {
 }
 
 template <class T>
-T Queue<T>::dequeue() throw(Error) {
+void Queue<T>::dequeue() throw(Error) {
 	if (empty()) {
 		throw Error("Queue is empty");
 	}
 
-	// find the first thing in the queue
-	T temp = _data[0];
-
-	// we'll have to shift all the elements to the left by 1. NOTE that this makes the dequeue operation O(n) instead of O(1).
+	// we'll have to shift all the elements to the left by 1. NOTE that this makes the dequeue operation O(n) instead of O(1) (see CleverArrayQueue for a
+	// solution)
 	for (unsigned long i = 0; i < _size - 1; i++) {
 		_data[i] = _data[i + 1];
 	}
@@ -59,12 +57,10 @@ T Queue<T>::dequeue() throw(Error) {
 		// time. This way, we have some leeway.
 		_shrink();
 	}
-
-	return temp;
 }
 
 template <class T>
-T Queue<T>::front() const throw(Error) {
+const T& Queue<T>::front() const throw(Error) {
 	if (empty()) {
 		throw Error("Queue is empty");
 	}
@@ -73,7 +69,7 @@ T Queue<T>::front() const throw(Error) {
 }
 
 template <class T>
-T Queue<T>::back() const throw(Error) {
+const T& Queue<T>::back() const throw(Error) {
 	if (empty()) {
 		throw Error("Queue is empty");
 	}

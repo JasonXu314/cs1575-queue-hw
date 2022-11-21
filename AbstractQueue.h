@@ -18,10 +18,10 @@ template <class T>
 class AbstractQueue {
 public:
 	virtual void enqueue(const T& elem) = 0;
-	virtual T dequeue() throw(Error) = 0;
-	virtual T front() const throw(Error) = 0;
+	virtual void dequeue() throw(Error) = 0;
+	virtual const T& front() const throw(Error) = 0;
 	// Technically this method makes this data structure a DEQueue (Double-Ended Queue), but apparently Morales doesn't care.
-	virtual T back() const throw(Error) = 0;
+	virtual const T& back() const throw(Error) = 0;
 	virtual bool empty() const = 0;
 	virtual unsigned long size() const = 0;
 	virtual void clear() = 0;

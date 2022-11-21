@@ -41,7 +41,7 @@ void Queue<T>::enqueue(const T& elem) {
 }
 
 template <class T>
-T Queue<T>::dequeue() throw(Error) {
+void Queue<T>::dequeue() throw(Error) {
 	if (empty()) {
 		throw Error("Queue is empty");
 	}
@@ -63,7 +63,7 @@ T Queue<T>::dequeue() throw(Error) {
 }
 
 template <class T>
-T Queue<T>::front() const throw(Error) {
+const T& Queue<T>::front() const throw(Error) {
 	if (empty()) {
 		throw Error("Queue is empty");
 	}
@@ -72,7 +72,7 @@ T Queue<T>::front() const throw(Error) {
 }
 
 template <class T>
-T Queue<T>::back() const throw(Error) {
+const T& Queue<T>::back() const throw(Error) {
 	if (empty()) {
 		throw Error("Queue is empty");
 	}
