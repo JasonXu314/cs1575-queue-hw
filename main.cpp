@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "Queue.h"
+#include "ArrayQueue.h"
 
 using namespace std;
 
